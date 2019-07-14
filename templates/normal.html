@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+
+    <div class="container" style="padding-top: 100px">
+        {% for film in filmler %}
+            <img src="{{ film.film_afis }}" style="width:150px">
+            <h3>{{ film.film_adi }}</h3><br>
+            <a >{{ film.film_yonetmen }}</a><br>
+            <a>{{ film.film_aktor }}</a><br>
+            <a>{{ film.film_aktris }}</a><br>
+            <a>{{ film.film_adi }}</a><br>
+            <a href="{% url 'detay' id=film.id %}" class="btn btn-primary" >İncele</a>
+            <hr>
+
+        {% endfor %}
+    </div>
+{% endblock %}

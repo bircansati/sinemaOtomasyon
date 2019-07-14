@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+
+    <div class="container" style="padding-top: 100px">
+        <img src="{{ film.film_afis }}" style="width:150px">
+        <h3>{{ film.film_adi }}</h3><br>
+        <a>{{ film.film_yonetmen }}</a><br>
+        <a>{{ film.film_aktor }}</a><br>
+        <a>{{ film.film_aktris }}</a><br>
+        {% for list in list %}
+            <a>list</a>
+        {% endfor %}
+        <button href="home" type="button" class="btn  btn-primary">Bilet Al</button>
+        <hr>
+
+
+    </div>
+{% endblock %}
